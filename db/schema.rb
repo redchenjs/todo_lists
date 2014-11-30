@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130033326) do
+ActiveRecord::Schema.define(version: 20141130073505) do
+
+  create_table "pcf_lists", force: true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.datetime "Update_time"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "todo_lists", force: true do |t|
     t.string   "title"

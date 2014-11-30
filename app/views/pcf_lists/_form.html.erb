@@ -1,0 +1,33 @@
+<%= form_for(@pcf_list) do |f| %>
+  <% if @pcf_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pcf_list.errors.count, "error") %> prohibited this pcf_list from being saved:</h2>
+
+      <ul>
+      <% @pcf_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :Update_time %><br>
+    <%= f.datetime_select :Update_time %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

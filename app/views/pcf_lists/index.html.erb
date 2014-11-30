@@ -1,0 +1,31 @@
+<h1>Listing pcf_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Update time</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pcf_lists.each do |pcf_list| %>
+      <tr>
+        <td><%= pcf_list.title %></td>
+        <td><%= pcf_list.author %></td>
+        <td><%= pcf_list.Update_time %></td>
+        <td><%= pcf_list.content %></td>
+        <td><%= link_to 'Show', pcf_list %></td>
+        <td><%= link_to 'Edit', edit_pcf_list_path(pcf_list) %></td>
+        <td><%= link_to 'Destroy', pcf_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pcf list', new_pcf_list_path %>

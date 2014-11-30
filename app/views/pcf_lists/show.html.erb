@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pcf_list.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @pcf_list.author %>
+</p>
+
+<p>
+  <strong>Update time:</strong>
+  <%= @pcf_list.Update_time %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @pcf_list.content %>
+</p>
+
+<%= link_to 'Edit', edit_pcf_list_path(@pcf_list) %> |
+<%= link_to 'Back', pcf_lists_path %>
